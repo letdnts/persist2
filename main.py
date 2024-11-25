@@ -6,7 +6,7 @@ app = FastAPI()
 
 # Incluindo as rotas de voo e arquivo
 app.include_router(voo_router)
-app.include_router(arquivo_router)
+app.include_router(arquivo_router, prefix="/api")
 
 @app.get("/")
 def read_root():
